@@ -1,17 +1,16 @@
 [project]
 name = "healthcare-rcm"
 version = "0.1.0"
-description = "Add your description here"
+description = "End-to-end Healthcare Revenue Cycle Management ETL Pipeline using Airflow, PostgreSQL, Docker, and Medallion Architecture"
 readme = "README.md"
-authors = [
-    { name = "junaidiqbal-hashmi", email = "161617609+junaidiqbal-hashmi@users.noreply.github.com" }
-]
 requires-python = ">=3.12"
-dependencies = []
-
-[project.scripts]
-healthcare-rcm = "healthcare_rcm:main"
-
-[build-system]
-requires = ["uv_build>=0.11.28,<0.12.0"]
-build-backend = "uv_build"
+dependencies = [
+    "click>=8.4.2",
+    "openpyxl>=3.1.5",
+    "pandas>=3.0.3",
+    "psycopg[binary]>=3.3.4",
+    "python-dotenv>=1.2.2",
+    "pyyaml>=6.0.3",
+    "sqlalchemy>=2.0.51",
+    "tqdm>=4.68.4",
+]
