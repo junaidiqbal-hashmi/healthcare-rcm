@@ -1,0 +1,43 @@
+services:
+
+  postgres:
+    image: postgres:17
+    container_name: healthcare_postgres
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: healthcare_rcm
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    restart: unless-stopped
+
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: healthcare_pgadmin
+
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+
+    ports:
+      - "8085:80"
+
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
+    depends_on:
+      - postgres
+
+    restart: unless-stopped
+
+
+volumes:
+  postgres_data:
+  pgadmin_data:

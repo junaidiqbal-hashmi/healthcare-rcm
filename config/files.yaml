@@ -1,0 +1,20 @@
+files:
+  - name: accounts_receivable
+    input_file: AccountsReceivableAnalysis.xlsx
+    sheet_name: Flat File
+    output_file: accounts_receivable.csv
+
+  - name: denials
+    input_file: Denials-RevCycleReady.xlsx
+    sheet_name: Flat Data
+    output_file: denials.csv
+
+  - name: rvu
+    input_file: TheRVU-RevCycleReady (1).xlsx
+    sheet_name: Flat Data 
+    output_file: rvu.csv
+
+  - name: write_offs
+    input_file: Write-OffReady-RevCycleReady.xlsx
+    sheet_name: Flat File
+    output_file: write_offs.csv

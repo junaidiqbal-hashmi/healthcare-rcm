@@ -1,0 +1,4 @@
+source: data/source
+raw: data/raw
+archive: data/archive
+logs: data/logs
