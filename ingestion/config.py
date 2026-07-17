@@ -30,3 +30,6 @@ def get_database_config():
 
 def get_logging_config():
     return load_yaml("logging.yaml")
+
+def get_schemas_config():
+    return load_yaml("schemas.yaml")
