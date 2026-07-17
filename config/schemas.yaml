@@ -1,0 +1,84 @@
+accounts_receivable:
+  dtype:
+    posting_month: string
+    service_line: string
+    adjustment_name: string
+    charges: float64
+    adjustments: float64
+    payments: float64
+    account_ar: float64
+
+  parse_dates: []
+
+
+denials:
+  dtype:
+    state: string
+    patient_number: string
+    payer_name: string
+    nonfacility: string
+    medicare_pos_number: string
+    medicare_pos_desc: string
+    location_name: string
+    cpt_code: string
+    cpt_modifier: string
+    cpt_desc: string
+    transaction: string
+    rarc: string
+    carc: string
+    denial_category: string
+    charges: float64
+    denial_amount: float64
+    payments: float64
+    adjustments: float64
+    net_ar: float64
+    denial_count: int64
+    units: float64
+
+  parse_dates: []
+
+
+rvu:
+  dtype:
+    state: string
+    patient_number: string
+    cpt_code: string
+    cpt_desc: string
+    cpt_status_code: string
+    provider_number: string
+    provider_specialty: string
+    place_of_service_number: string
+    place_of_service_desc: string
+    fnf: string
+    payer_name: string
+    transactions: string
+    cpt_modifier_all: string
+    units: float64
+    units_wcharge: float64
+    unique_patients: float64
+    wrvu: float64
+    pe_rvu: float64
+    mp_rvu: float64
+    trvu: float64
+    wrvu_gpci: float64
+    pe_rvu_gpci: float64
+    mp_rvu_gpci: float64
+    trvu_gpci: float64
+    chg: float64
+    pmt: float64
+    adj: float64
+    net: float64
+
+  parse_dates: []
+
+
+write_offs:
+  dtype:
+    post_date_month: string
+    provider_name: string
+    specialty: string
+    department_name: string
+    adjustment_name: string
+    adjustments: float64
+
+  parse_dates: []
